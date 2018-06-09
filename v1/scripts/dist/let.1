@@ -1,0 +1,42 @@
+.Dd $Mdocdate: June 18 2019 $
+.Bd -literal -offset 2n
+.Sy Usage:
+.Pp
+.Bd -filled -offset 2n
+.Nm let
+.Op options
+.Ar file
+.Ed
+.Pp
+.Sy Options:
+.Pp
+.Bl -tag -width 18n -offset 2n
+.It Fl h,
+.It Fl -help
+Print help information.
+.Pp
+.It Fl -os=...
+Set OS of output executable.
+Valid values: mac64 (or mac).
+Default value: mac64.
+.Pp
+.It Fl -output=...
+Set name of output executable.
+.Pp
+.It Fl v,
+.It Fl V,
+.It Fl -version
+Print version.
+.El
+.Pp
+.Sy Examples:
+.Pp
+.Bl -column -offset 2n
+.It Sy $
+let
+.Ar file
+.It Sy $
+let
+.Ar file.let
+.El
+.Ed

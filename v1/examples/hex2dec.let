@@ -1,0 +1,22 @@
+func hex2dec(hex) {
+  hexNum = hex.substr(2)
+  hexLen = hexNum.length
+
+  hexLine = [
+    '0', '1', '2', '3', '4', '5', '6', '7', '8',
+    '9', '10', '11', '12', '13', '14', '15'
+  ]
+
+  dec = 0
+
+  loop i = 0; i < hexLen; i++ {
+    multiplicand = hexLine.indexOf(hexNum[i].toUpper())
+    multiplier = Math.pow(16, hexLen - 1 - i)
+
+    dec += multiplicand * multiplier
+  }
+
+  return dec
+}
+
+puts(hex2dec('0x4FA1'))

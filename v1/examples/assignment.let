@@ -1,0 +1,16 @@
+num1 = 0
+num2 = 10
+num3 = 101
+
+str1 = ''
+str2 = 'Hello'
+str3 = "world!"
+
+str4 = 'Hello
+world!'
+
+str5 = "Hello
+world!"
+
+id1 = num1
+id2 = str1

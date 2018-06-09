@@ -1,0 +1,24 @@
+'.source.let':
+  'notice block comment':
+    'prefix': '/*!'
+    'body': '''
+      /*!
+       * ${0}
+       */
+    '''
+  'documentation block comment':
+    'prefix': '/**'
+    'body': '''
+      /**
+       * ${0}
+       */
+    '''
+  'block comment':
+    'prefix': '/*'
+    'body': '/* ${0} */'
+  'print built-in function':
+    'prefix': 'print'
+    'body': 'print(${0})'
+  'puts built-in function':
+    'prefix': 'puts'
+    'body': 'puts(${0})'

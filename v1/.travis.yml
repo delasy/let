@@ -1,0 +1,54 @@
+language: cpp
+
+branches:
+  only:
+    - master
+    - /^v\d+\.\d+(\.\d+)?(-\S*)?$/
+
+matrix:
+  include:
+    - name: "Unit Tests - Linux Xenial (4.15)"
+      dist: xenial
+      os: linux
+    - name: "Unit Tests - Linux Trusty (4.4)"
+      dist: trusty
+      os: linux
+    - name: "Unit Tests - Linux Precise (3.13)"
+      dist: precise
+      os: linux
+      addons:
+        apt:
+          sources:
+            - george-edison55-precise-backports
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-4.9
+            - cmake-data
+            - cmake
+      env:
+        - MATRIX_EVAL="CXX=g++-4.9 && CC=gcc-4.9"
+    - name: "Unit Tests - MacOS Mojave (10.14)"
+      os: osx
+      osx_image: xcode10.2
+    - name: "Unit Tests - MacOS High Sierra (10.13)"
+      os: osx
+      osx_image: xcode10.1
+    - name: "Unit Tests - MacOS Sierra (10.12)"
+      os: osx
+      osx_image: xcode9.2
+    - name: "Unit Tests - MacOS El Capitan (10.11)"
+      os: osx
+      osx_image: xcode8
+    - name: "Unit Tests - MacOS Yosemite (10.10)"
+      os: osx
+      osx_image: xcode6.4
+
+before_install:
+  - eval "${MATRIX_EVAL}"
+  - cmake --version && $CXX --version && $CC --version
+
+before_script:
+  - scripts/init.sh
+
+script:
+  - scripts/test.sh unit

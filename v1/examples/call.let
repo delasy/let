@@ -1,0 +1,53 @@
+// 0 arguments
+
+print()
+puts()
+
+// 1 argument (Number)
+
+print(1)
+puts(1)
+
+// 1 argument (String - single quoted)
+
+print('Print: String SQ, ')
+puts('Puts: String SQ')
+
+// 1 argument (String - double quoted)
+
+print("Print: String DQ, ")
+puts("Puts: String DQ")
+
+// N arguments
+
+print(1, ', String SQ, ', "String DQ, ")
+puts(100, ', String SQ, ', "String DQ")
+
+// N arguments (references)
+
+firstName = 'Aaron'
+lastName = "Delasy"
+age = 20
+_firstName = 'John'
+_lastName = "Doe"
+_age = 24
+
+print(firstName, ' ', lastName, ':', age, ' != ')
+puts(_firstName, ' ', _lastName, ':', _age)
+
+// N arguments (nils)
+
+print(Aaron, ' ', Delasy, ':', male, ' == ')
+puts(_John, ' ', _Doe, ':', _male)
+
+// N arguments (reference of reference)
+
+manufacturer = 'Intel'
+processor = "Xeon W"
+wordSize = 64
+_manufacturer = manufacturer
+_processor = processor
+_wordSize = wordSize
+
+print(manufacturer, ' ', processor, ' (', wordSize, ') == ')
+puts(_manufacturer, ' ', _processor, ' (', _wordSize, ')')

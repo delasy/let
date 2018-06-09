@@ -1,0 +1,19 @@
+# https://github.com/dessant/lock-threads
+
+setLockReason: true
+
+issues:
+  daysUntilLock: 14
+
+  lockComment: >
+    This issue has been automatically locked because it has not had
+    recent activity after it was closed. Please open a new issue for
+    related bugs.
+
+pulls:
+  daysUntilLock: 30
+
+  lockComment: >
+    This pull request has been automatically locked because it has not had
+    recent activity after it was closed. Please open a new pull request for
+    related bugs.

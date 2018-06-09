@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<installer-gui-script minSpecVersion="1">
+  <title>The Let Programming Language</title>
+  <background file="banner.png" mime-type="image/png" scaling="proportional" />
+  <welcome file="welcome.html" mime-type="text/html" />
+  <conclusion file="conclusion.html" mime-type="text/html" />
+  <license file="license.txt" mime-type="text/plain" />
+  <options customize="never" allow-external-scripts="no" />
+  <installation-check script="installCheck()" />
+  <script>
+    function installCheck () {
+      var osVersion = system.version.ProductVersion
+      var binLocation = '/usr/local/bin/let'
+
+      if (!(system.compareVersions(osVersion, '10.0.0') >= 0)) {
+        my.result.message = 'Let requires Mac OS X 10.0.0 or later.'
+        my.result.title = 'Unable to install'
+        my.result.type = 'Fatal'
+
+        return false
+      } else if (system.files.fileExistsAtPath(binLocation)) {
+        my.result.message = 'A previous installation of Let exists at ' +
+          binLocation + '. ' +
+          'This installer will remove the previous installation prior to ' +
+          'installing. ' +
+          'Please back up any data before proceeding.'
+
+        my.result.title = 'Previous Installation Detected'
+        my.result.type = 'Warning'
+
+        return false
+      }
+
+      return true
+    }
+  </script>
+  <choices-outline>
+    <line choice="let" />
+  </choices-outline>
+  <choice id="let" title="Let {version}">
+    <pkg-ref id="let.pkg" />
+  </choice>
+  <pkg-ref id="let.pkg" version="{version}" auth="root">
+    let-v{version}.pkg
+  </pkg-ref>
+</installer-gui-script>

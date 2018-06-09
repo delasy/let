@@ -1,0 +1,32 @@
+# https://github.com/probot/stale
+
+exemptAssignees: true
+exemptLabels: security
+exemptMilestones: true
+staleLabel: stale
+
+issues:
+  daysUntilClose: 16
+  daysUntilStale: 14
+
+  markComment: >
+    This issue has been automatically marked as stale because it has
+    not had recent activity. It will be closed if no further activity occurs
+    during the next two weeks. Thank you for your contributions.
+
+  closeComment: >
+    This issue has been automatically closed because of inactivity.
+    You can re-open it if needed.
+
+pulls:
+  daysUntilClose: 30
+  daysUntilStale: 30
+
+  markComment: >
+    This pull request has been automatically marked as stale because it has
+    not had recent activity. It will be closed if no further activity occurs
+    during the next month. Thank you for your contributions.
+
+  closeComment: >
+    This pull request has been automatically closed because of inactivity.
+    You can re-open it if needed.

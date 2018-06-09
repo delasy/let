@@ -1,0 +1,115 @@
+'comment': 'Let'
+
+'fileTypes': [
+  'let'
+]
+
+'firstLineMatch': '\\A#!.*?\\blet\\b'
+
+'foldingStartMarker': '({|\\()\\s*$'
+
+'foldingStopMarker': '(}|\\))\\s*$'
+
+'name': 'Let'
+
+'patterns': [
+  {
+    'include': '#comments'
+  }
+  {
+    'include': '#strings'
+  }
+  {
+    'include': '#numbers'
+  }
+  {
+    'comment': 'Built-in functions'
+    'match': '\\b(print|puts)\\b(?=\\s*\\()'
+    'name': 'support.function.builtin.let'
+  }
+  {
+    'comment': 'Assignment'
+    'match': '\\w+(?=\\s*:=)'
+    'name': 'variable.other.assignment.let'
+  }
+]
+
+'repository':
+  'comments':
+    'patterns': [
+      {
+        'begin': '/\\*!(?![\\*/])'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.comment.begin.let'
+        'end': '\\*/'
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.comment.end.let'
+        'name': 'comment.block.notice.let'
+      }
+      {
+        'begin': '/\\*\\*(?![\\*/])'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.comment.begin.let'
+        'end': '\\*/'
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.comment.end.let'
+        'name': 'comment.block.documentation.let'
+      }
+      {
+        'begin': '/\\*'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.comment.begin.let'
+        'end': '\\*/'
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.comment.end.let'
+        'name': 'comment.block.let'
+      }
+      {
+        'begin': '//'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.comment.let'
+        'end': '$'
+        'name': 'comment.line.double-slash.let'
+      }
+    ]
+  'strings':
+    'patterns': [
+      {
+        'begin': '\''
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.string.begin.let'
+        'end': '\''
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.string.end.let'
+        'name': 'string.quoted.single.let'
+      }
+      {
+        'begin': '"'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.string.begin.let'
+        'end': '"'
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.string.end.let'
+        'name': 'string.quoted.double.let'
+      }
+    ]
+  'numbers':
+    'patterns': [
+      {
+        'match': '(?:\\b\\d+\\b(?!\\.))'
+        'name': 'constant.numeric.decimal.let'
+      }
+    ]
+
+'scopeName': 'source.let'

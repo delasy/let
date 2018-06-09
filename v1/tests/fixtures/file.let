@@ -1,0 +1,6 @@
+a = 1
+b = 'sq string'
+c = "dq string"
+d = false
+e = true
+f = nil

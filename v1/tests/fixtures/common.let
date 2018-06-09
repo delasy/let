@@ -1,0 +1,36 @@
+/*
+ * Comments (line, multiline)
+ * Strings (single quoted, double quoted)
+ * Numbers (integer)
+ *
+ * Statements:
+ *   - Assignment:
+ *     - String
+ *     - Number
+ *     - Reference
+ *     - Reference of reference
+ *   - Call:
+ *     - Zero arguments
+ *     - One argument
+ *     - Multiple arguments
+ */
+
+// Line comment
+
+az = 1
+b = 100
+c = 'Multi-line single-quoted
+string'
+
+d = "Multi-line double-quoted\x1
+string"
+
+e = c
+f = e
+
+puts(e)
+puts(f, d, '1')
+puts(az, '1', 1)
+
+print(b, c, d)
+puts()

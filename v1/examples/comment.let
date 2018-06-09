@@ -1,0 +1,25 @@
+//
+// Multiline line comment
+//
+
+// Line line comment
+
+/* Line block comment */
+
+/*
+
+Multiline block comment
+
+*/
+
+/**
+ *
+ * Documentation multiline block comment
+ *
+ */
+
+/*!
+ *
+ * Notice multiline block comment
+ *
+ */

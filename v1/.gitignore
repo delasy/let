@@ -1,0 +1,17 @@
+# IDE
+/.idea/
+
+# OS
+.DS_Store
+
+# Let
+/build/
+/dist/
+
+# Object file
+*.o
+
+# Executable
+*.app
+*.exe
+*.out

@@ -1,0 +1,20 @@
+{
+  "name": "let",
+  "version": "0.1.1",
+  "description": "The Let Programming Language support in Atom",
+  "repository": "https://github.com/let/atom-let",
+  "keywords": [
+    "let",
+    "atom",
+    "atom-syntax"
+  ],
+  "author": "Aaron Delasy <aaron@delasy.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/let/atom-let/issues"
+  },
+  "homepage": "https://github.com/let/atom-let#readme",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
